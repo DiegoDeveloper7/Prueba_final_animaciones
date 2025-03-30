@@ -90,14 +90,28 @@ html, body {
 
   .buscador .titulo-filtro {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
     margin-top: 10px;   /* controla el margen superior del titulo */
     margin-bottom: 10px;  /* controla el margen inferior del titulo */
     font-weight: 400;
-    color: #006400;
+    color: yellowgreen;
     letter-spacing: 0.5px;
+    animation: desplazamiento 2s linear infinite; 
   }
+
+  /* Animación de desplazamiento horizontal */
+@keyframes desplazamiento {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(50px); /* Se mueve a la derecha */
+  }
+  100% {
+      transform: translateX(0); /* Vuelve a la posición inicial */
+  }
+}
 
   .buscador .select-contenedor {
     position: relative;
