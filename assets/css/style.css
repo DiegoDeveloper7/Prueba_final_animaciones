@@ -15,14 +15,14 @@ html, body {
   /* Grilla contenedor Principal */
 
   .grid-contendor {
-    height: 100vh;
+    height: 120vh;
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    'aside header'
+    'header header'
     'aside section'
-    'footer section';
+    'footer footer';
   }
 
     /* LEFTBAR - ASIDE */
@@ -60,6 +60,9 @@ html, body {
     gap: 15px;
     margin: 4rem;
     font-size: 1rem;
+    position: sticky;
+    top: 150px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
     
   }
 
@@ -147,9 +150,10 @@ html, body {
     grid-template-areas: 
     "productos"
     "indice";
-   grid-template-rows: calc(100% - 80px) 80px;
+   grid-template-rows: calc(100% - 80px)80px; /* Modifica tamaño filas indice de paginas y section */
    height: 100%;
    overflow: hidden;
+   background-color: yellow;
   }
 
   .contenedor-productos .carro-contenedor {
@@ -166,12 +170,7 @@ html, body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /*se hace esta configuracion en estado original mejorar animacion*/
   }
 
-  .contenedor-productos .carro-contenedor:hover {
-    -transform: translateY(-5px);  
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-  }
-
-
+  
   .contenedor-productos .carro-contenedor .carro-tarjeta {
      
     background-color: white;
@@ -268,7 +267,7 @@ html, body {
       gap: 0.5rem;
       padding: 12px 0;
       background-color: cornflowerblue;
-      height: 80px;
+      -height: 80px;
       overflow: hidden;
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
     }
@@ -328,7 +327,7 @@ html, body {
       background-color: #66C200;
       padding: 15px 20px;
       color: #006400; /* modificado */
-      height: 160px;
+      height: 150px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -411,9 +410,9 @@ html, body {
    .contenedor-productos .indice-paginas {
           gap: 0.3rem;
           min-width: 35px;
-          height: 35px;
-          background: white;
-          margin-top: 20px;
+          height: 85px;
+          background: yellow;
+        
    }
 
   }
@@ -422,9 +421,9 @@ html, body {
 
     .grid-contendor {
       grid-template-columns: 250px 1fr;
-      grid-template-rows: 84px 1fr auto;
+      grid-template-rows: 150px 1fr auto;
       grid-template-areas:
-      'aside header'
+      'header header'
       'aside section'
       'footer footer';
     }
@@ -451,14 +450,14 @@ html, body {
     box-shadow: none;
     backdrop-filter: blur(0);
     text-align: start;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
   }
 
   .leftbar .leftbar-titulo i {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0;
   }
 
@@ -466,5 +465,29 @@ html, body {
     grid-template-columns: 1fr 1fr;
     padding: 20px;
   }
+
+  /* Modificacion medidas del titulo */
+
+  .buscador .titulo-filtro {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;   /* controla el margen superior del titulo */
+    margin-bottom: 10px;  /* controla el margen inferior del titulo */
+    font-weight: 400;
+    color: yellowgreen;
+    letter-spacing: 0.5px;
+    animation: desplazamiento 2s linear infinite; 
+  }
+
+ /* Modificacion medidas del footer */
+
+  .pie-pagina {
+  
+    background-color: #66C200;
+    color: #006400; /* modificado */
+    height: 120px;
+  
+   }
 
   }
