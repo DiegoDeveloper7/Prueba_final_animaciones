@@ -9,6 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
   }
 
   /* Grilla contenedor Principal */
@@ -21,8 +22,7 @@ html, body {
     grid-template-areas: 
     'aside header'
     'aside section'
-    'footer section'
-    ;
+    'footer section';
   }
 
     /* LEFTBAR - ASIDE */
@@ -149,7 +149,14 @@ html, body {
     /* Generar Scroll */
     overflow-y: auto;
     scrollbar-width: thin;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*se hace esta configuracion en estado original mejorar animacion*/
   }
+
+  .contenedor-productos .carro-contenedor:hover {
+    -transform: translateY(-5px);  
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
 
   .contenedor-productos .carro-contenedor .carro-tarjeta {
      
@@ -158,19 +165,33 @@ html, body {
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-
   }
 
-  .contenedor-productos .carro-contenedor:hover {
-    transform: translateY(-5px);  
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-  }
-
+                 /* Animaciones imgs */
   .contenedor-productos .carro-contenedor .carro-tarjeta img {
     width: 100%;
     height: 250px;
     object-fit: fill;
+    filter: grayscale(100%); /* Imagen en blanco y negro */
+    transition: filter 0.3s ease-in-out, transform 1.2s cubic-bezier(0.25, 1.5, 0.5, 1.2);
   }
+
+  .contenedor-productos .carro-contenedor .carro-tarjeta img:hover {
+    filter: grayscale(0%); /* Muestra el color original */
+    transform: translateY(-60px); /* Sube aún más */
+    animation: bounce 0.8s ease-out;
+
+  }
+
+  @keyframes bounce {
+    0% { transform: translateY(-60px); }  /* Punto más alto */
+    30% { transform: translateY(0px); }   /* Baja */
+    50% { transform: translateY(-20px); } /* Rebote hacia arriba */
+    70% { transform: translateY(0px); }   /* Baja otra vez */
+    85% { transform: translateY(-10px); } /* Último rebote más leve */
+    100% { transform: translateY(0px); }  /* Posición final */
+}
+
   
             /* contenido de la tarjeta */
 
@@ -209,13 +230,18 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s ease-out;
     
   }
 
   .contenedor-productos .carro-contenedor .carro-tarjeta .contenido-tarjeta .boton:hover {
     background-color: #00FF00;
     color: #006400;
+    
+  }
+
+  .contenedor-productos .carro-contenedor .carro-tarjeta .contenido-tarjeta .boton:active {
+    transform: scale(0.70);
   }
 
     /* INDICE - PÁGINAS */
