@@ -30,7 +30,7 @@ html, body {
   .leftbar {
     grid-area: aside;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: cornflowerblue;
+    background-color: #4169E1;
     color:#00FF00;
     padding: 20px 0;
   }
@@ -67,7 +67,7 @@ html, body {
   }
 
   .leftbar .leftbar-menu a {
-    color: #006400;
+    color: blue;
     font-weight: 600;
     text-decoration: underline;
     transition: color 0.3s ease;
@@ -87,7 +87,7 @@ html, body {
 
   .buscador {
     grid-area: header;
-    background-color: #66C200;
+    background-color:black;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
@@ -98,7 +98,7 @@ html, body {
     margin-top: 10px;   /* controla el margen superior del titulo */
     margin-bottom: 10px;  /* controla el margen inferior del titulo */
     font-weight: 400;
-    color: yellowgreen;
+    color: yellow;
     letter-spacing: 0.5px;
     animation: desplazamiento 2s linear infinite; 
   }
@@ -130,7 +130,7 @@ html, body {
   border-radius: 10px;
   background-color: white;
   font-size: 16px;
-  color: #006400;
+  color: #000080;
   transition: border-color 0.2s, box-shadow 0.2s;
   margin-bottom: 10px;   /* controla el margen inferior del select */
  
@@ -231,8 +231,8 @@ html, body {
   }
 
   .contenedor-productos .carro-contenedor .carro-tarjeta .contenido-tarjeta .boton {
-    background-color: #FFD700;
-    color: #FF4040; 
+    background-color: #4F4F4F;
+    color: #C0C0C0; 
     border: none;
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
@@ -261,7 +261,7 @@ html, body {
       align-items: center;
       gap: 0.5rem;
       padding: 12px 0;
-      background-color: cornflowerblue;
+      background-color:#4169E1;
       -height: 80px;
       overflow: hidden;
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
@@ -319,9 +319,9 @@ html, body {
 
      .pie-pagina {
       grid-area: footer;
-      background-color: #66C200;
+      background-color: black;
       padding: 15px 20px;
-      color: #006400; /* modificado */
+      color: yellow; /* modificado */
       height: 150px;
       display: flex;
       flex-direction: column;
@@ -339,18 +339,18 @@ html, body {
      .pie-pagina .pie-redes a {
       font-size: 1.5rem;
       margin-bottom: 12px;
-      color: #006400; /* modificado */
+      color: yellow; /* modificado */
      }
 
      .pie-pagina .pie-texto {
       text-align: center;
-      color: #006400;
+      color: yellow;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      }
 
      .pie-pagina .pie-texto a {
       text-decoration: none;
-      color: #006400;
+      color: yellow;
       font-weight: 600;
       font-style: italic;
       
@@ -406,7 +406,7 @@ html, body {
           gap: 0.3rem;
           min-width: 35px;
           height: 85px;
-          background: yellow;
+          background: #4169E1;
         
    }
 
@@ -465,12 +465,12 @@ html, body {
 
   .buscador .titulo-filtro {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-top: 20px;   /* controla el margen superior del titulo */
     margin-bottom: 10px;  /* controla el margen inferior del titulo */
     font-weight: 400;
-    color: yellowgreen;
+    color: yellow;
     letter-spacing: 0.5px;
     animation: desplazamiento 2s linear infinite; 
   }
@@ -478,11 +478,8 @@ html, body {
  /* Modificacion medidas del footer */
 
   .pie-pagina {
-  
-    background-color: #66C200;
-    color: #006400; /* modificado */
+    background-color: black;
     height: 120px;
-  
    }
 
   }
