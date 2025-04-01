@@ -128,7 +128,7 @@ html, body {
   padding: 10px 5px;
   border: 1px solid blue;
   border-radius: 10px;
-  background-color: white;
+  background-color: #4169E1;
   font-size: 16px;
   color: #000080;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -277,19 +277,20 @@ html, body {
       font-size: 1.1rem;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* modificado */
       text-decoration: none;
-      color: #006400; 
+      color: yellow; 
       border-radius: 4px;
       box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px; /* verificar */
-      background-color: whitesmoke;
+      background-color: #FF4040;
       transition: transform 0.3s ease-out;
     }
 
     .contenedor-productos .indice-paginas .page-item:hover {
-      color: #00FF00;
+      color: #FF4040;
+      background-color: yellow;
       font-weight: 400;
     }
 
- /* Efecto Dock */
+
  .indice-paginas:hover .page-item {
   transform: translateY(0);
 }
@@ -337,14 +338,14 @@ html, body {
      }
 
      .pie-pagina .pie-redes a {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 12px;
-      color: yellow; /* modificado */
+      color: yellow;
+      transition: color 0.3s ease-in-out;
      }
 
      .pie-pagina .pie-texto {
       text-align: center;
-      color: yellow;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      }
 
@@ -353,8 +354,14 @@ html, body {
       color: yellow;
       font-weight: 600;
       font-style: italic;
-      
+      transition: color 0.3s ease-in-out;
      }
+
+     .pie-pagina .pie-redes a:hover, .pie-texto a:hover {
+       color: red;
+     }
+
+
 
   /* MEDIAS QUERIES  */
 
@@ -395,6 +402,10 @@ html, body {
       text-align: start;
       font-size: 1.5rem;
       color: #00FF00;
+    }
+
+    .buscador .titulo-filtro {
+      font-size: 1.2rem;
     }
 
    .contenedor-productos .carro-contenedor {
