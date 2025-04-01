@@ -1,6 +1,6 @@
 Desarrollo de proyecto responsivo. Usando Media querys y Grid. 
 
-Incorporación de Transdormaciones y anmaciones CSS.
+Incorporación de Tranformaciones y anmaciones CSS.
 
 Entrega Final. Cierre de Modulo CSS avanzado. 
 
