@@ -1,4 +1,4 @@
-Desarrollo de proyecto responsivo. Usando Media querys y Grid. 
+Desarrollo de proyecto responsivo. Usando Media queries y Grid. 
 
 Incorporación de Tranformaciones y anmaciones CSS.
 
